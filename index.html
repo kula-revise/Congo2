@@ -60,7 +60,7 @@
   .story-num { font-family: var(--serif); font-size: clamp(2.6rem,9vw,4rem); font-weight: 800; color: var(--a1); line-height: 1; letter-spacing: -0.02em; }
   .story-unit { font-family: var(--sans); font-size: 0.82rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--fade); font-weight: 700; margin-top: 0.5rem; }
   .story-rule { width: 100%; height: 1px; background: rgba(27,42,51,0.22); margin: 1.4rem 0 1.6rem; }
-  .story-line { font-size: 1.24rem; line-height: 1.66; margin-bottom: 1.05rem; opacity: 0; transform: translateY(6px); transition: opacity 0.55s ease, transform 0.55s ease; }
+  .story-line { font-size: 1.24rem; line-height: 1.66; margin-bottom: 1.05rem; opacity: 0; transform: translateY(6px); transition: opacity 0.5s ease, transform 0.5s ease; }
   .story-line.vis { opacity: 1; transform: translateY(0); }
   .story-line.last { color: var(--a2); font-style: italic; font-weight: 600; }
 
@@ -249,7 +249,7 @@ const RESULTS = {
     "excellent": "You are holding effective and ineffective in the same hand, which is exactly what this topic needs. Move on to Lesson 3.",
     "strong": "Strong work. Look again at any weighing question you missed, then go to Lesson 3.",
     "solid": "The facts are landing but the judgement is slipping. Reread the card on the gap between claim and reality, then carry on.",
-    "patchy": "The trap here is picking a side. Go back through the claim-against-reality cards, then try again.",
+    "patchy": "Picking a side is the easy mistake here. Go back through the claim-against-reality cards, then try again.",
     "start": "Go again slowly. The order was real and so was the suppression underneath it. Hold both, and the lesson opens up."
   }
 };
@@ -278,7 +278,7 @@ const FLOW = [
       "There is no honest way of judging this from outside, so the safest thing is not to draw a conclusion"
     ],
     "correct": 0,
-    "explanation": "Option {opt0} names the test: what happens to the person who speaks up. That one question separates a group that agrees from a group that has been silenced. Option {opt1} is tempting because quiet often does mean agreement, but not until you know what happens to people who disagree out loud."
+    "explanation": "{opt0} names the test: what happens to the person who speaks up. That one question separates a group that agrees from a group that's been silenced. {opt1} tempts because quiet often does mean agreement. But not until you know what happens to people who say no out loud."
   },
   {
     "type": "question",
@@ -291,7 +291,7 @@ const FLOW = [
       "Finding out whether people outside the group think that it is running well now"
     ],
     "correct": 0,
-    "explanation": "You went for the test, not the claim, which is the right move. When someone says they've restored order, don't argue with the announcement. Go and look at what happened to the people who opposed them."
+    "explanation": "You went for the test, not the claim. That's the right move. When someone says they've restored order, don't argue with the announcement. Go and look at what happened to the people who opposed them."
   },
   {
     "type": "content",
@@ -324,7 +324,7 @@ const FLOW = [
       "Mobutu announced in November 1965 that he intended to govern for the next five years"
     ],
     "correct": 0,
-    "explanation": "Option {opt0} measures the exact thing the concession claims: that the state stopped breaking apart. Option {opt1} is tempting because renaming a capital feels like real change, but it's a symbol, not proof that anything held together. Use your strongest evidence when you grant a point."
+    "explanation": "{opt0}. It measures the exact thing you're granting: the state stopped breaking apart. {opt1} tempts because renaming a capital feels like change. But it's a symbol, not proof anything held together. Use your strongest evidence when you grant a point."
   },
   {
     "type": "question",
@@ -337,7 +337,7 @@ const FLOW = [
       "Mobutu gave very long speeches that were broadcast on the radio each night"
     ],
     "correct": 0,
-    "explanation": "Option {opt0} is the one that proves total control. If you belong to the ruling party from the day you are born, there is no space outside it. Option {opt1} is tempting because it's striking, but a hat shows style, not power. The renaming and the speeches prove little on their own."
+    "explanation": "{opt0}. Belong to the ruling party from the day you're born and there's no space left outside it. That's total control. {opt1} tempts because it's striking, but a hat shows style, not power. The renaming and the speeches prove little on their own."
   },
   {
     "type": "source",
@@ -364,7 +364,7 @@ const FLOW = [
       "Many African leaders in this period made speeches about tradition and about the problems of party political competition"
     ],
     "correct": 0,
-    "explanation": "Option {opt0} quotes the position and then says what it was doing, which is analysis. Option {opt1} is tempting because it reports the source accurately, but it stops there. Quoting a source and then saying nothing about it wastes it."
+    "explanation": "{opt0} quotes the position, then says what it was doing. That's analysis. {opt1} tempts because it reports the source accurately, but it stops there. Quote a source and then say nothing about it and you've wasted it."
   },
   {
     "type": "content",
@@ -392,7 +392,7 @@ const FLOW = [
       "Mobutuism was taught in schools and broadcast on national television every evening"
     ],
     "correct": 0,
-    "explanation": "Option {opt0} is the cleanest proof, because automatic membership at birth removes any choice to belong. Option {opt1} is tempting because 98 per cent sounds overwhelming. But it's a result, and you can always argue about how a result was produced. Membership from birth leaves nothing to argue about."
+    "explanation": "{opt0}. Membership from birth removes any choice to belong, so there's nothing to argue with. {opt1} tempts because 98 per cent sounds overwhelming. But it's a result, and you can always argue about how a result was produced."
   },
   {
     "type": "question",
@@ -415,12 +415,12 @@ const FLOW = [
       "2": 0,
       "3": 1
     },
-    "explanation": "The first and third are how the state described itself: united, and led. The second and fourth are what that description was made of underneath: a single party nobody could leave, and opposition removed rather than persuaded. Holding the claim and the reality side by side is the move this lesson is built on."
+    "explanation": "The first and third are how the state described itself: united, and led. The second and fourth are what that description was made of: a single party nobody could leave, and opposition removed rather than won over. Hold the claim and the reality side by side. That's the whole lesson."
   },
   {
     "type": "content",
     "tag": "Claim against reality",
-    "html": "<h2>Both halves are true</h2><p>Line them up. The secessions really were ended, and the country really was held together. That is the claim, and you should grant it.</p><p>Underneath, the holding-together was done by removing everyone who might pull the other way. That is the reality. You need both halves, because the gap between them is the whole point of this phase.</p>"
+    "html": "<h2>Both halves are true</h2><p>Line them up. The secessions really were ended, and the country really was held together. That is the claim, and you should grant it.</p><p>Underneath, the holding-together was done by removing everyone who might pull the other way. That is the reality. You need both halves, because that gap is what this phase is about.</p>"
   },
   {
     "type": "question",
@@ -433,7 +433,7 @@ const FLOW = [
       "It strengthens the achievement, because attracting and keeping powerful foreign allies was itself a considerable diplomatic accomplishment for a new state"
     ],
     "correct": 0,
-    "explanation": "Option {opt0} qualifies the achievement without cancelling it, which is what weighing means. Option {opt3} is tempting because keeping a superpower onside really did take skill. But it quietly swaps the question: the topic is about developing the Congo, not about keeping Mobutu in power."
+    "explanation": "{opt0} qualifies the achievement without cancelling it. That's weighing. {opt3} tempts because keeping a superpower onside really did take skill. But it quietly swaps the question. This is about developing the Congo, not about keeping Mobutu in power."
   },
   {
     "type": "question",
@@ -446,7 +446,7 @@ const FLOW = [
       "The country was calmer after 1967 than it had been at any point in the preceding five years"
     ],
     "correct": 0,
-    "explanation": "Option {opt0} holds both halves in one sentence, the concession and the judgement, joined by a but. That structure drives a critically discuss answer. Option {opt3} is tempting because it's true, but on its own it argues for him, which is the opposite of what you want here."
+    "explanation": "{opt0} holds both halves in one sentence, the concession and the judgement, joined by a but. That's the shape a critically discuss answer needs. {opt3} tempts because it's true, but on its own it argues for him, which is the opposite of what you want."
   },
   {
     "type": "question",
@@ -459,7 +459,7 @@ const FLOW = [
       "Impossible to assess fairly, because the sources from this period were controlled by his own government and cannot be trusted"
     ],
     "correct": 0,
-    "explanation": "Option {opt0} splits effectiveness by purpose: effective at what, and for whom. That's the sharpest way to handle a policy that clearly succeeded at something. Option {opt3} is tempting because state control of information was real. But much of the evidence here is the government praising itself, which is the hardest kind to wave away."
+    "explanation": "{opt0} splits it by purpose: effective at what, and for whom. That's the sharpest way to handle a policy that clearly worked at something. {opt3} tempts because state control of information was real. But most of the evidence here is the government praising itself, and that's the hardest kind to trust."
   },
   {
     "type": "carousel",
@@ -505,7 +505,7 @@ const FLOW = [
       "Mobutu restored order and national unity to the Congo, and the political stability he achieved was the foundation of everything that came after 1970"
     ],
     "correct": 0,
-    "explanation": "Option {opt0} grants the point, judges it and draws a consequence, all in one sentence, and you use that consequence in Lesson 4. Option {opt1} is tempting because it's an accurate list of real policies. But a list with no argument attached is just narration, full of facts and going nowhere."
+    "explanation": "{opt0} grants the point, judges it, and draws a consequence, all in one sentence. You'll use that consequence in Lesson 4. {opt1} tempts because it's an accurate list of real policies. But a list with no argument attached is just narration, full of facts and going nowhere."
   },
   {
     "type": "runsum",
@@ -962,7 +962,7 @@ function showResults(){
   document.getElementById("finish-btn").addEventListener("click",()=>{
     const back=document.createElement("div");
     back.className="pop-back";
-    back.innerHTML=`<div class="pop"><div class="pop-label">Lesson complete</div><div class="pop-text">Click on the arrow above to continue to the next lesson.</div><button class="pop-btn" id="fin-ok">Close</button></div>`;
+    back.innerHTML=`<div class="pop"><div class="pop-label">Lesson 2 complete</div><div class="pop-text">Click on the arrow above to continue to the next lesson.</div><button class="pop-btn" id="fin-ok">Close</button></div>`;
     document.body.appendChild(back);
     document.getElementById("fin-ok").addEventListener("click",()=>back.remove());
   });
